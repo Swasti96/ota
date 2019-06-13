@@ -9,17 +9,17 @@ import java.util.Random;
 public class DistribuidorDeTrafico {
 
     private Random random = new Random();
-    private List<Proveedor>provedores = new ArrayList<>();
+    private List<Proveedor>proveedores = new ArrayList<>();
 
-    public DistribuidorDeTrafico(List<Proveedor> provedores) {
-        this.provedores = provedores;
+    public DistribuidorDeTrafico(List<Proveedor> proveedores) {
+        this.proveedores = proveedores;
     }
 
-    public void addProvedores(Proveedor proveedor){
-        provedores.add(proveedor);
+    public void addProveedores(Proveedor proveedor){
+        proveedores.add(proveedor);
     }
 
     public Proveedor proveedor() {
-        return provedores.get(random.nextInt(provedores.size()));
+        return proveedores.get(random.nextInt(proveedores.size()));
     }
 }
